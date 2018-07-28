@@ -1,0 +1,10 @@
+//- includes/lesson.pug
+
+mixin lesson(name, link, nextLink)
+	main
+		h1= name
+		.embed-responsive.embed-responsive-16by9.video-iframe
+			iframe(src=link)
+		if nextLink
+			.next
+				a(href=nextLink) Pokračovat na další Lekci

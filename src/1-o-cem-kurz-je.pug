@@ -1,0 +1,10 @@
+doctype html
+html(lang='cs-cz')
+	include includes/header.pug
+	body
+		include includes/menu.pug
+		include includes/lesson.pug
+		//- +lesson(LessonName, VideoLink, NextLessonSlug)
+		+lesson('1. O čem kurz je?', 'https://www.youtube.com/embed/FaqrHPS5a-Y?rel=0&amp;showinfo=0', '/2-prevence-urazu.html')
+		include includes/footer.pug
+		

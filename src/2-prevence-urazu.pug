@@ -1,0 +1,10 @@
+doctype html
+html(lang='cs-cz')
+	include includes/header.pug
+	body
+		include includes/menu.pug
+		include includes/lesson.pug
+		//- +lesson(LessonName, VideoLink, NextLessonSlug)
+		+lesson('2. Prevence úrazů', 'https://www.youtube.com/embed/ZplVdRGjFV0?rel=0&amp;showinfo=0', '/3-prvni-kroky-po-urazu.html')
+		include includes/footer.pug
+		

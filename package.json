@@ -1,0 +1,27 @@
+{
+	"name": "PUG-HTML-builder",
+	"version": "1.0.1",
+	"description": "PUG builder + watcher + live reload",
+	"author": "vlastapolach.cz",
+	"license": "ISC",
+	"private": true,
+	"main": "gulpfile.js",
+	"devDependencies": {
+		"browser-sync": "^2.24.4",
+		"gulp": "^3.9.1",
+		"gulp-clean-css": "^3.9.4",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-less": "^4.0.1",
+		"gulp-pug": "^4.0.1",
+		"gulp-watch": "^5.0.0",
+		"imagemin-jpeg-recompress": "^5.1.0",
+		"imagemin-pngquant": "^5.1.0",
+		"less-plugin-autoprefix": "^2.0.0",
+		"run-sequence": "^2.2.1"
+	},
+	"scripts": {
+		"default": "node_modules/.bin/gulp default",
+		"build": "node_modules/.bin/gulp build"
+	}
+}
