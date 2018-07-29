@@ -1,6 +1,7 @@
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Helvetica, Arial, sans-serif;
+	color: @color-text;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -14,12 +15,16 @@ body {
 
 main,
 footer {
-	width: @content-width;
-	margin-left: @nav-width;
-	padding-left: 1em;
+	padding: 0 1em;
+
+	@media (min-width: @grid-md) {
+		width: calc(100% - @nav-width - 2em);
+		margin-left: @nav-width;
+	}
 
 	@media (min-width: @grid-lg) {
-		margin: 0 auto;
+		max-width: @content-width;
+		margin-left: @nav-width;
 	}
 }
 
@@ -29,4 +34,20 @@ main  {
 
 .bold {
 	font-weight: 700;
+}
+
+h1 {
+	color: @color-primary;
+	margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3 {
+	text-align: center;
+	font-weight: 500;
+}
+
+p {
+	line-height: 1.4;
 }

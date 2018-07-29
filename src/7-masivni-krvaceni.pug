@@ -3,8 +3,11 @@ html(lang='cs-cz')
 	include includes/header.pug
 	body
 		include includes/menu.pug
-		include includes/lesson.pug
-		//- +lesson(LessonName, VideoLink, NextLessonSlug)
-		+lesson('7. Masivní krvácení', 'https://www.youtube.com/embed/BhFJAwGghI0?rel=0&amp;showinfo=0', '/8-domaci-lekarnicka.html')
+
+		main
+			include includes/mixins.pug
+			//- +lesson(LessonName, VideoLink, NextLessonSlug)
+			+lesson('7. Masivní krvácení', 'https://www.youtube.com/embed/BhFJAwGghI0?rel=0&amp;showinfo=0', '/8-domaci-lekarnicka.html')
+			
 		include includes/footer.pug
 		

@@ -1,0 +1,44 @@
+// Convert svg icon to Base64
+.make-me-base64(@icon) {
+	background-image: data-uri(
+		"image/svg+xml;charset=UTF-8",
+		"src/icons/@{icon}"
+	);
+}
+
+// Icons
+.icon {
+	text-align: center;
+	padding: 30px;
+	&:before {
+		content: "";
+		padding: 30px;
+		position: relative;
+		top: 30px;
+		background-repeat: no-repeat;
+	}
+}
+
+.icon__dollar {
+	&:before {
+		.make-me-base64("dollar.svg");
+	}
+}
+
+.icon__heartbeat {
+	&:before {
+		.make-me-base64("heartbeat.svg");
+	}
+}
+
+.icon__laptop {
+	&:before {
+		.make-me-base64("laptop.svg");
+	}
+}
+
+.icon__tachometer {
+	&:before {
+		.make-me-base64("tachometer.svg");
+	}
+}

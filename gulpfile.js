@@ -20,11 +20,11 @@ let paths = {
 	pug: {
 		source: ["src/*.pug"],
 		watch: ["src/**/*.pug"],
-		target: "build"
+		target: ""
 	},
 	images: {
 		source: "src/img/**/*",
-		target: "build/img"
+		target: "img"
 	}
 };
 
@@ -54,7 +54,7 @@ let errorHandlers = {
 gulp.task("browser-sync", function() {
 	browserSync.init({
 		server: {
-			baseDir: "./build/"
+			baseDir: "./"
 		}
 	});
 });

@@ -3,8 +3,11 @@ html(lang='cs-cz')
 	include includes/header.pug
 	body
 		include includes/menu.pug
-		include includes/lesson.pug
-		//- +lesson(LessonName, VideoLink, NextLessonSlug)
-		+lesson('6. Zástava dechu', 'https://www.youtube.com/embed/V4lwv8aPhI4?rel=0&amp;showinfo=0', '/7-masivni-krvaceni.html')
+
+		main
+			include includes/mixins.pug
+			//- +lesson(LessonName, VideoLink, NextLessonSlug)
+			+lesson('6. Zástava dechu', 'https://www.youtube.com/embed/V4lwv8aPhI4?rel=0&amp;showinfo=0', '/7-masivni-krvaceni.html')
+			
 		include includes/footer.pug
 		

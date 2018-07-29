@@ -1,3 +1,10 @@
 //- includes/footer.pug
 footer
-  p.center Copyright (c) vlastapolach.cz
+	p
+		span= '' +  new Date().getFullYear() + ' '
+		a(href="https://vlastapolach.cz" target="_blank" rel="noopener noreferrer" title="Online kurz a web: vlastapolach.cz") vlastapolach.cz
+		span ,&nbsp; 
+		a(href="https://barborapolach.cz" target="_blank" rel="noopener noreferrer" title="Texty: barborapolach.cz") barborapolach.cz
+
+script
+	include ../js/script.min.js

@@ -1,0 +1,43 @@
+article {
+	@media (min-width: @grid-sm) {
+		width: 80%;
+		margin: auto;
+	}
+
+	li {
+		line-height: 1.4;
+	}
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	margin: 2em 0;
+
+	@media (min-width: @grid-sm) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.col {
+		width: 100%;
+
+		@media (min-width: @grid-sm) {
+			width: 30%;
+			display: inline-block;
+		}
+
+		p {
+			text-align: center;
+		}
+	}
+}
+
+.reference {
+	padding: 1em 0;
+
+	.photo {
+		float: left;
+		padding: 0 1em 0.5em 0;
+	}
+}

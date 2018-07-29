@@ -1,4 +1,4 @@
-##Install dependencies
+## Install dependencies
 
 npm install
 
@@ -12,4 +12,4 @@ gulp build
 
 ### Final version of web
 
-in /build/ subdirectory
+html files in root

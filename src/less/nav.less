@@ -1,21 +1,75 @@
 nav {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: @nav-width;
-	color: @color-white;
-	background: @gradient;
-	min-height: 100vh;
-	padding: 0.5em 1em;
-	box-sizing: border-box;
+	.desktop {
+		position: absolute;
+		top: 0;
+		width: 255px;
+		color: @color-white;
+		background: @gradient;
+		min-height: 100vh;
+		height: 100%;
+		padding: 0.5em 1em;
+		box-sizing: border-box;
+		overflow: hidden;
+		left: -@nav-width;
+		transition: @transition-menu;
+		z-index: 10;
+
+		@media (min-height: @nav-height) {
+			position: fixed;
+		}
+
+		@media (min-width: @grid-md) {
+			width: @nav-width;
+			left: 0;
+		}
+	}
+
+	.mobile {
+		color: @color-white;
+		background: @gradient;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		@media (min-width: @grid-md) {
+			display: none;
+		}
+
+		.nav__title {
+			padding: 0.5em 0 0.5em 1em;
+		}
+
+		.nav__toggle {
+			margin: 0.5em 1em;
+
+			a {
+				padding: 0.5em;
+				text-decoration: none;
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 5px;
+
+				&:hover,
+				&:focus,
+				&:active {
+					background: rgba(255, 255, 255, 0.4);
+				}
+			}
+		}
+	}
+
+	.show-menu {
+		left: 0;
+	}
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		position: relative;
+		z-index: 20;
 
 		li {
-			@media (min-height: 500px) {
+			@media (min-height: @nav-height) {
 				padding: 0.25em 0;
 			}
 		}
@@ -26,6 +80,7 @@ nav {
 		text-decoration: none;
 		padding: 0.5em 0;
 		display: block;
+		z-index: 1000;
 
 		&:hover {
 			text-decoration: underline;
@@ -34,6 +89,21 @@ nav {
 }
 
 .nav__title {
-	font-size: 1.1em;
-	font-weight: 700;
+	font-weight: 500;
+}
+
+.nav__icon {
+	display: none;
+
+	&:before {
+		position: absolute;
+		left: -70px;
+		top: ~"calc(100vh - 270px)";
+		padding: 160px;
+		z-index: 0;
+	}
+
+	@media (min-height: @nav-height) {
+		display: block;
+	}
 }

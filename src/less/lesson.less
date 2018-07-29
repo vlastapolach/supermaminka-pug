@@ -1,0 +1,60 @@
+main {
+	.video {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0;
+		overflow: hidden;
+		padding-top: 56.25%;
+
+		&:before {
+			padding-top: 56.25%;
+		}
+
+		iframe {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 0;
+			z-index: 0;
+		}
+	}
+
+	.next {
+		text-align: right;
+		padding-top: 1rem;
+
+		a {
+			color: @color-primary;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.responsive {
+		max-width: 100%;
+	}
+
+	.left {
+		text-align: left;
+	}
+
+	.mt-2 {
+		margin-top: 2em;
+	}
+
+	a {
+		color: @color-primary;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

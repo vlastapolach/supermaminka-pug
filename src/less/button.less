@@ -1,0 +1,22 @@
+.button {
+	display: block;
+	margin: auto;
+	padding: 2em 0;
+	text-align: center;
+
+	a {
+		color: @color-white;
+		background-color: @color-primary;
+		border: 2px solid @color-primary;
+		padding: 0.75em 1.5em;
+		border-radius: 0.25em;
+		text-decoration: none;
+		font-size: 1.1em;
+		transition: @transition-button;
+
+		&:hover  {
+			color: @color-primary;
+			background-color: @color-white;
+		}
+	}
+}

@@ -3,7 +3,66 @@ html(lang='cs-cz')
 	include includes/header.pug
 	body
 		include includes/menu.pug
+		
 		main
-			h1 Pug test
-			p cože?
+			include includes/mixins.pug
+			//- +lesson(LessonName, VideoLink, NextLessonSlug)
+			+lesson('Dítě v bezpečí není mýtus', 'https://www.youtube.com/embed/FHVP247l5AM?rel=0&amp;showinfo=0')
+
+			.about
+				.col
+					.icon.icon__laptop
+					h2 Z&nbsp;pohodlí domova
+					p Necestujte za vzděláním. S&nbsp;notebookem nebo chytrým telefonem máte vše, co potřebujete.
+
+				.col
+					.icon.icon__dollar
+					h2 Zadarmo
+					p Na zdraví svého dítěte si nemusíte vydělávat. Neplaťte za vzdělání, které má mít každá maminka.
+
+				.col
+					.icon.icon__tachometer
+					h2 Hotovo za 38 minut
+					p Víme, že nemáte času nazbyt. Místo 1&nbsp;dílu Ulice budete umět vašemu dítěti zachránit život.
+
+			+button('Chci začít', '/1-o-cem-kurz-je.html')
+
+			article
+				h2 Přečtěte si příběh Honzíkovy maminky
+				p … a zatímco si děli hrály na prolejzačkách, s Magdou jsme probíraly, z jakého dortu bude mít Honzík největší radost. Jeho zítřejší narozeniny musí být perfektní! Vyndala jsem z kabelky papír a tužku a začala malovat Krtečka ve všech možných pozicích, když nás vyrušila malá Kája se slovy: <strong>„Mami Honzík si se mnou nechce hrát!“</strong>
+				p Rozhlédla jsem se po hřišti, kde ten můj kluk zase dělá lumpárny a viděla Honzu ležet pod prolejzačkou. Hrklo ve mně. Rozeběhla jsem se k němu a čím víc jsem se blížila, tím horší pohled to pro mě byl. <strong>Honzík ležel bezvládně na zemi.</strong> Ze všech plic jsem na něj řvala, třásla s ním, ale on ne a ne se vzbudit. Křičela jsem: „Pomozte mi, dělejte něco,“ ale nikdo mi nepomohl. Slzy mi tekly po tvářích a propadala jsem naprostému zoufalství. Když v tom přiběhl na hřiště nějaký muž. Zeptal se co se mě, co se stalo, mluvil na Honzíka, ale ten neodpovídal. Sklonil se k němu a řekl mi, že dýchá. Vyndal telefon, vytočil záchranku a ubezpečil mě, že všechno bude zase v pořádku…
+				p <strong>Co kdyby žádný cizí muž nepřiběhl? Co kdyby Honzík nedýchal a nestačilo by jenom zavolat záchranku?</strong>
+				p Na všechny otázky vám odpoví instruktor první pomoci s 5 letou praxí,&nbsp;<strong>Vlasta Polách</strong>. V Čechách i v zahraničí naučil více než 900 studentů, jak zachraňovat životy a sám má na kontě 7 zachráněných lidí. Absolvoval desítky kurzů první pomocí. Jak ty civilní, tak vojenské, například Combat Medic. Ze všech načerpaných informací a vlastní zkušenosti z praxe tak mohl vytáhnout ty nejdůležitější informace a poskládat z nich kurz jak pro maminky, tak pro všechny, komu životy blízkých nejsou lhostejné.
+
+			article.reference
+				p 
+					img.photo(src="/img/simca.jpg")
+					<em>Předem bych chtěla moc poděkovat za možnost tento kurz shlédnou. Vzhledem k&nbsp;tomu, že jsem čerstvou maminkou 3 měsíční holčičky je&nbsp;to pro mě opravdu velmi užitečný a&nbsp;naučný kurz. V&nbsp;tuto chvíli máme doma v&nbsp;lékárničce pouze základní věci, nyní ale už vím, že musím mít doma mnohem více věcí, které případně pomohou mé dceři při jakémkoliv zranění (ale jako každá maminka doufám, že se nic takového nestane). Určitě doporučuji, abyste si kurz pustily i&nbsp;Vy. Ať už jste maminka od dvou a&nbsp;více dětí, nebo začínající maminka jako já. ? Kurz Vás naučí co dělat, když přijde nějaká potíž. Navíc Vás&nbsp;to naučí v&nbsp;krátké době a&nbsp;v&nbsp;pohodlí domova.</em>
+				p <strong>Simona Janoušková</strong>, novopečená maminka
+
+			+button('Pustit kurz', '/1-o-cem-kurz-je.html')
+
+			article
+				p Nejste si 100% jistá, že je s&nbsp;vámi vaše dítě v&nbsp;bezpečí? Lektor Vlasta vás&nbsp;to během 38 minut naučí. Nespoléhejte na jiné, když jde o&nbsp;život vašeho dítěte. Neštěstí nechodí po&nbsp;horách, ale po&nbsp;lidech.
+
+				p <em>„Času máte málo, nemůžete trávit dny, ani hodiny na kurzech, proto jsem vyhodil všechnu omáčku a&nbsp;nacpal to, co potřebujete o&nbsp;úrazech vědět, do 8 krátkých kapitol,“</em> říká Vlasta.
+
+				ul
+					li jak rozeznávat <strong>největší rizika pro děti</strong> podle věkových kategorií
+					li jak <strong>předcházet rizikům</strong>, která dětem hrozí
+					li jak <strong>získat jistotu</strong> u krizové situace
+					li jak a kdy <strong>volat na pomoc záchranáře</strong>
+					li jak <strong>rozeznat akutní stavy</strong>, které nepočkají na příjezd záchranářů
+					li jak vyřešit <strong>vdechnutí cizího předmětu</strong>
+					li jak vyřešit <strong>bezvědomí u dítěte</strong>
+					li jak vyřešit <strong>krvácení u dítěte</strong>
+					li jak <strong>vybavit domácí lékárničku</strong>
+
+			article.reference
+				p 
+					img.photo(src="/img/lenka.jpg")
+					<em>Chtěla bych poděkovat za možnost získat informace ohledně prevence úrazů, poskytnutí pomoci a&nbsp;to nejen dětem. Vůbec jsem netušila, že menší děti mají zúžené zorné pole a&nbsp;jiné vnímání nebezpečí, než dospělý člověk. Jsem maminkou a&nbsp;zažila jsem situaci, kdy se mé dítě začalo dusit pastilkou na bolení v&nbsp;krku. Intuitivně jsem začala bušit do zad, abych&nbsp;mu uvolnila dýchací cesty a&nbsp;naštěstí&nbsp;to stačilo. Co bych dělala dál v&nbsp;této život ohrožující situaci, nedokážu posoudit. Děkuju tedy za odborné a&nbsp;jistě potřebné informace, které jsem se dozvěděla, v&nbsp;poměrně krátkém čase, za domácí úkoly. Určitě si kurz pro zopakování pustím znovu.</em>
+				p <strong>Lenka Ježková</strong>, ostřílená maminka
+
+			+button('Chci hned projít kurzem', '/1-o-cem-kurz-je.html')
 		include includes/footer.pug

@@ -3,8 +3,11 @@ html(lang='cs-cz')
 	include includes/header.pug
 	body
 		include includes/menu.pug
-		include includes/lesson.pug
-		//- +lesson(LessonName, VideoLink, NextLessonSlug)
-		+lesson('3. První kroky po úrazu', 'https://www.youtube.com/embed/i0Cjr0Vauck?rel=0&amp;showinfo=0', '/4-volani-o-pomoc.html')
+
+		main
+			include includes/mixins.pug
+			//- +lesson(LessonName, VideoLink, NextLessonSlug)
+			+lesson('3. První kroky po úrazu', 'https://www.youtube.com/embed/i0Cjr0Vauck?rel=0&amp;showinfo=0', '/4-volani-o-pomoc.html')
+			
 		include includes/footer.pug
 	

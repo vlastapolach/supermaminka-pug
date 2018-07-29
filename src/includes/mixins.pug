@@ -1,0 +1,13 @@
+//- includes/mixins.pug
+
+mixin lesson(name, link, nextLink)
+	h1= name
+	.video
+		iframe(src=link)
+	if nextLink
+		.next
+			a(href=nextLink) Pokračovat na další lekci
+
+mixin button(name, link)
+	.button
+		a(href=link)=name
