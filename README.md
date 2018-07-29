@@ -12,4 +12,4 @@ gulp build
 
 ### Final version of web
 
-html files in root
+All files in /docs/ folder
